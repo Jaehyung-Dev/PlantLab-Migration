@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<html>
-<body>
-<h2>Hello World!</h2>
-=======
 <%--
   Created by IntelliJ IDEA.
   User: bitcamp
@@ -495,6 +490,5 @@
         $("#modalmaincontent" + commentId).hide();
     }
 </script>
->>>>>>> submain
 </body>
 </html>
