@@ -102,7 +102,7 @@
                                     </td>
                                     <td>${popBoard.board_view_cnt}</td>
                                     <td>${popBoard.board_like_cnt}</td>
-                                    <td>${popBoard.board_bookmark_cnt}0</td>
+                                    <td>${popBoard.board_bookmark_cnt}</td>
                                 </tr>
                             </c:forEach>
                             </tbody>

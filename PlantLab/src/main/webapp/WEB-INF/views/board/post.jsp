@@ -68,6 +68,47 @@
         text.innerHTML = insertRule(board_name.value);
     });
 
+    const titleInput = document.querySelector("input[name='board_title']");
+    let prefix = "";
+
+    // 게시판 타입에 따른 접두사 설정 함수
+    const updateTitlePrefix = () => {
+        switch (board_name.value) {
+            case "1":
+                prefix = "정보_";
+                break;
+            case "2":
+                prefix = "잡담_";
+                break;
+            case "3":
+                prefix = "질문_";
+                break;
+            default:
+                prefix = "";
+        }
+
+        // 제목이 이미 접두사가 붙어 있다면 제거 후 다시 추가
+        if (titleInput.value.startsWith("정보_") || titleInput.value.startsWith("잡담_") || titleInput.value.startsWith("질문_")) {
+            titleInput.value = titleInput.value.substring(titleInput.value.indexOf("_") + 1);
+        }
+
+        titleInput.value = prefix + titleInput.value;
+    };
+
+    // 게시판 타입 변경 시 접두사 업데이트
+    board_name.addEventListener("change", updateTitlePrefix);
+
+    // 페이지 로드 시 초기 접두사 적용 (만약 기존에 제목이 있으면)
+    document.addEventListener("DOMContentLoaded", () => {
+        updateTitlePrefix(); // 페이지 로드 시 접두사 추가
+    });
+
+    // 폼 제출 시 접두사 추가 후 제출
+    const form = document.querySelector("form");
+    form.addEventListener("submit", (event) => {
+        updateTitlePrefix(); // 제목에 접두사 추가
+    });
+
 </script>
 </body>
 </html>
