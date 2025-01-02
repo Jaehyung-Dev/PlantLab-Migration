@@ -21,7 +21,7 @@
             <img src="../../../static/images/Header%20with%20image_마이페이지.png" alt="마이페이지 헤더">
         </header>
         <div class="container">
-            <div class="container-flex">
+            <div class="container-left">
                 <div class="profilebox">
                     <div class="profileicon">
                         <div class="shareicon">
@@ -104,7 +104,7 @@
                     <input type="radio" id="shoptype" name="content">
                 </div>
             </div>
-            <div class="contentbox-board" id="content-a">
+            <div class="contentbox board" id="content-a">
                 <c:choose>
                     <c:when test="${empty myWrite}">
                         <tr>
@@ -228,7 +228,7 @@
                     </c:otherwise>
                 </c:choose>
             </div>
-            <div class="contentbox-sns" id="content-b" style="display: none;"> <!--클릭시 자랑글 모달 띄우게 가능할까요?-->
+            <div class="contentbox" id="content-b" style="display: none;"> <!--클릭시 자랑글 모달 띄우게 가능할까요?-->
                 <div class="flex-center">
                     <div id="grid-div">
                         <c:choose>
@@ -259,7 +259,7 @@
                     </button>
                 </div>
             </div>
-            <div class="contentbox--shopping" id="content-c" style="display: none;">
+            <div class="contentbox" id="content-c" style="display: none;">
                 <div id="purchaseProcess">
                     <ul style="list-style: none; display: flex; margin-top: 20px;">
                         <li>입금대기
@@ -295,18 +295,19 @@
                 </div>
                 <div class="shoppingmenu">
                     <span style="font-size: 18px;">구매확정 목록</span>
-                    <span>
-                        <div class="shoppingdrop">
-                            <select name="purchaseTime" id="purchaseTime" style="width: 100px; margin-top: -15px;">
-                                <option value="1개월 전">1개월 전</option>
-                                <option value="3개월 전" selected>3개월 전</option>
-                                <option value="6개월 전">6개월 전</option>
-                                <option value="1년 전">1년 전</option>
-                                <option value="2년 전">2년 전</option>
-                                <option value="3년 전">3년 전</option>
-                            </select>
-                        </div>
-                    </span>
+                    <select name="purchaseTime" id="purchaseTime">
+                        <option value="1개월 전">1개월 전</option>
+                        <option value="3개월 전" selected>3개월 전</option>
+                        <option value="6개월 전">6개월 전</option>
+                        <option value="1년 전">1년 전</option>
+                        <option value="2년 전">2년 전</option>
+                        <option value="3년 전">3년 전</option>
+                    </select>
+<%--                    <span>--%>
+<%--                        <div class="shoppingdrop">--%>
+<%--                            --%>
+<%--                        </div>--%>
+<%--                    </span>--%>
                 </div>
                 <div style="margin-top: 5px; width: 750px; height: 510px; background-color: #F5F7F6; border: solid #B5B5B5 1px;">
                     <!-- 1번 -->

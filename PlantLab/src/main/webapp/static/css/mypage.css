@@ -8,11 +8,17 @@
     max-width: 1115px;
 }
 
-.container-flex {
+.container-left {
     display: flex;
     flex-direction: column;
     justify-content: left;
     text-align: center;
+}
+
+.contentbox {
+    width: 831px;
+    height: 671px;
+    margin-left: 19px;
 }
 
 .profilebox {
@@ -110,17 +116,13 @@ td {
     padding: 5px;
 }
 
-.contentbox-board {
-    width: 831px;
-    height: 671px;
-    margin-left: 19px;
+.board {
     border: #B5B5B5 solid 1px;
     background-color: #F5F7F6;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .cover-table {
@@ -128,9 +130,7 @@ td {
     height: auto;
 }
 
-.contentbox-sns {
-    /*display: flex;*/
-    /*justify-content: center;*/
+.contentbox {
     width: 831px;
     height: 671px;
     margin-left: 19px;
@@ -150,6 +150,9 @@ td {
     grid-template-rows: repeat(3, 1fr) ;
     align-items: center;
     justify-items: center;
+    button {
+        padding: 5px;
+    }
 }
 
 .grid-item {
@@ -159,7 +162,7 @@ td {
 
 #modal-open-btn{
     padding-top: 10px;
-    width: 220px;
+    width: 280px;
     height: 200px;
 }
 
@@ -392,11 +395,8 @@ button {
     color: white;
 }
 
-.contentbox--shopping {
-    margin-left: 19px;
-}
-
 .shoppingmenu {
+    width: 750px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
